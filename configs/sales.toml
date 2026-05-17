@@ -1,0 +1,72 @@
+[ontology]
+name = "sales_reasoning_model_shadow"
+
+[[node]]
+id = "deal:enterprise_expansion"
+kind = "Deal"
+label = "Enterprise expansion opportunity"
+
+[[node]]
+id = "person:champion"
+kind = "Champion"
+label = "Internal champion"
+
+[[node]]
+id = "person:economic_buyer"
+kind = "EconomicBuyer"
+label = "Economic buyer"
+
+[[node]]
+id = "stage:technical_validation"
+kind = "SalesStage"
+label = "Technical validation"
+
+[[node]]
+id = "risk:price_objection"
+kind = "Risk"
+label = "Price objection"
+
+[[node]]
+id = "action:mutual_plan"
+kind = "Action"
+label = "Mutual close plan"
+
+[[node]]
+id = "action:discount"
+kind = "Action"
+label = "Discount proposal"
+
+[[edge]]
+source = "deal:enterprise_expansion"
+target = "person:champion"
+relation = "has_champion"
+confidence = 0.92
+control = "A.6.2.6"
+
+[[edge]]
+source = "person:champion"
+target = "person:economic_buyer"
+relation = "influences"
+confidence = 0.78
+control = "A.6.2.6"
+
+[[edge]]
+source = "deal:enterprise_expansion"
+target = "stage:technical_validation"
+relation = "currently_in"
+confidence = 0.89
+control = "A.6.2.8"
+
+[[edge]]
+source = "stage:technical_validation"
+target = "risk:price_objection"
+relation = "surfaces"
+confidence = 0.71
+control = "A.6.2.4"
+
+[[edge]]
+source = "risk:price_objection"
+target = "action:mutual_plan"
+relation = "mitigated_by"
+confidence = 0.86
+control = "A.6.2.6"
