@@ -1,5 +1,6 @@
 # srm-redteam
 
+![srm-redteam working preview](outputs/project_working.svg)
 Local SRM architecture red-team harness for graph-backed, memoryful AI agents.
 
 The project models a Sales Reasoning Model-style architecture with a typed ontology, knowledge graph traversal, structured tenant memory, attack families, evidence mapping, and an offline dashboard. It is designed to run entirely on deterministic local fixtures.
@@ -25,6 +26,9 @@ uv run srm-redteam evidence
 uv run srm-redteam verify
 uv run srm-redteam dashboard
 ```
+
+
+![srm-redteam evidence map](outputs/evidence_map.svg)
 
 ## Materialized results
 
