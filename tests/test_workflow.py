@@ -100,3 +100,29 @@ def test_dashboard_escapes_fixture_text() -> None:
         assert "<script>alert('x')</script>" not in html
     finally:
         suite_path.write_text(original, encoding="utf-8")
+
+
+def test_visual_svgs_are_bounded_and_regenerated() -> None:
+    reset_runtime()
+    init_demo(PROJECT_ROOT)
+    run_suite(PROJECT_ROOT, iterations=20)
+    export_evidence_pack(PROJECT_ROOT)
+    from srm_redteam.dashboard import build_dashboard
+
+    build_dashboard(PROJECT_ROOT)
+
+    import xml.etree.ElementTree as ET
+
+    for name in ["project_working.svg", "evidence_map.svg"]:
+        svg_path = PROJECT_ROOT / "outputs" / name
+        assert svg_path.exists()
+        root = ET.fromstring(svg_path.read_text(encoding="utf-8"))
+        _, _, width, height = [float(item) for item in root.attrib["viewBox"].split()]
+        for rect in root.findall(".//{http://www.w3.org/2000/svg}rect"):
+            x = float(rect.attrib.get("x", 0))
+            y = float(rect.attrib.get("y", 0))
+            w = float(rect.attrib.get("width", 0))
+            h = float(rect.attrib.get("height", 0))
+            assert x >= 0 and y >= 0
+            assert x + w <= width
+            assert y + h <= height

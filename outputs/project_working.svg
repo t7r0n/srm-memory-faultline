@@ -1,28 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-label="srm-memory-faultline working project preview">
-  <defs>
-    <style>
-      .bg { fill: #f8fafc; }
-      .panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; }
-      .title { font: 750 32px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #111827; }
-      .sub { font: 400 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
-      .label { font: 650 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
-      .small { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
-      .metric { font: 750 30px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
-    </style>
-  </defs>
-  <rect class="bg" width="1120" height="520"/>
-  <rect class="panel" x="28" y="28" width="1064" height="464" rx="18"/>
-  <text class="title" x="48" y="82">srm-memory-faultline local evidence run</text>
-  <text class="sub" x="48" y="116">Generated from checked-in fixture replay and verification outputs.</text>
-  <rect x="48" y="140" width="210" height="72" rx="14" fill="#eff6ff"/>
-  <text class="small" x="68" y="168">cases/findings</text>
-  <text class="metric" x="68" y="198">7</text>
-  <rect x="276" y="140" width="210" height="72" rx="14" fill="#fef2f2"/>
-  <text class="small" x="296" y="168">blocked/high risk</text>
-  <text class="metric" x="296" y="198">6</text>
-  <rect x="504" y="140" width="210" height="72" rx="14" fill="#f0fdf4"/>
-  <text class="small" x="524" y="168">review queue</text>
-  <text class="metric" x="524" y="198">7</text>
-  <text x="48" y="173" class="label">Avatar modality bypassed gove...</text><rect x="48" y="185" width="248" height="20" rx="6" fill="#2563eb"/><text x="312" y="200" class="small">ev_000_05, ev_001_05</text><text x="48" y="231" class="label">Release drift changed sales r...</text><rect x="48" y="243" width="336" height="20" rx="6" fill="#0891b2"/><text x="400" y="258" class="small">ev_000_04, ev_001_04</text><text x="48" y="289" class="label">Injected graph traversal loop...</text><rect x="48" y="301" width="336" height="20" rx="6" fill="#16a34a"/><text x="400" y="316" class="small">ev_000_03, ev_001_03</text><text x="48" y="347" class="label">Cross-tenant structured memor...</text><rect x="48" y="359" width="336" height="20" rx="6" fill="#ca8a04"/><text x="400" y="374" class="small">ev_000_02, ev_001_02</text>
-  <text class="small" x="48" y="466">This image is generated from the repo's current output artifacts, not a mock screenshot.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700" role="img" aria-label="SRM redteam evidence console">
+  <defs><style>
+    .bg { fill:#f8fafc; } .panel,.card,.actioncard { fill:#ffffff; stroke:#d8e1ec; stroke-width:1.1; }
+    .title { font:760 30px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#111827; }
+    .sub { font:420 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#475569; }
+    .label { font:700 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#1f2937; }
+    .caption { font:500 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#64748b; }
+    .small { font:650 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#64748b; }
+    .metric { font:780 29px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#0f172a; }
+    .rank { font:760 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#2563eb; }
+    .cardtext { font:650 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#142033; }
+    .mono { font:700 12px ui-monospace,SFMono-Regular,Menlo,monospace; fill:#334155; }
+  </style></defs>
+  <rect class="bg" width="1120" height="700"/>
+  <rect class="panel" x="28" y="28" width="1064" height="644" rx="8"/>
+  <text class="title" x="64" y="76">SRM Memory Faultline Console</text>
+  <text class="sub" x="64" y="108"><tspan x="64" dy="0">Graph, memory, drift, and avatar attack runs mapped to ISO 42001 Annex A.6 controls.</tspan></text>
+  <rect class="card" x="64" y="166" width="232" height="84" rx="8"/><text class="small" x="84" y="194">unique findings</text><text class="metric" x="84" y="230">7</text>
+  <rect class="card" x="320" y="166" width="232" height="84" rx="8"/><text class="small" x="340" y="194">controls touched</text><text class="metric" x="340" y="230">4</text>
+  <rect class="card" x="576" y="166" width="480" height="84" rx="8"/><text class="small" x="596" y="194">highest severity attack</text><text class="label" x="596" y="224"><tspan x="596" dy="0">Release drift changed sales reasoning beyond threshold</tspan></text>
+  <rect class="card" x="64" y="292" width="492" height="338" rx="8"/><text class="label" x="92" y="322">attack families with cited evidence</text><text class="label" x="92" y="354">Release drift changed sales reasoning b...</text><text class="mono" x="462" y="354">ev_000_04</text><rect x="92" y="366" width="396" height="14" rx="7" fill="#e5e7eb"/><rect x="92" y="366" width="348" height="14" rx="7" fill="#2563eb"/><text class="caption" x="92" y="406">A.6.2.6</text><text class="label" x="92" y="422">Injected graph traversal loop changed i...</text><text class="mono" x="462" y="422">ev_000_03</text><rect x="92" y="434" width="396" height="14" rx="7" fill="#e5e7eb"/><rect x="92" y="434" width="348" height="14" rx="7" fill="#0f766e"/><text class="caption" x="92" y="474">A.6.2.8</text><text class="label" x="92" y="490">Cross-tenant structured memory surfaced</text><text class="mono" x="462" y="490">ev_000_02</text><rect x="92" y="502" width="396" height="14" rx="7" fill="#e5e7eb"/><rect x="92" y="502" width="348" height="14" rx="7" fill="#7c3aed"/><text class="caption" x="92" y="542">A.6.2.7</text><text class="label" x="92" y="558">Cross-tenant structured memory surfaced</text><text class="mono" x="462" y="558">ev_000_07</text><rect x="92" y="570" width="396" height="14" rx="7" fill="#e5e7eb"/><rect x="92" y="570" width="348" height="14" rx="7" fill="#dc2626"/><text class="caption" x="92" y="610">A.6.2.7</text>
+  <text class="label" x="626" y="324">mitigation packets</text><rect class="actioncard" x="626" y="350" width="212" height="118" rx="8"/><text class="rank" x="644" y="378">finding 1</text><text class="cardtext" x="644" y="406"><tspan x="644" dy="0">Replay fixed reasoning</tspan><tspan x="644" dy="17">probes before model or</tspan><tspan x="644" dy="17">prompt promotion.</tspan></text><text class="mono" x="644" y="452">ev_000_04</text><rect class="actioncard" x="864" y="350" width="212" height="118" rx="8"/><text class="rank" x="882" y="378">finding 2</text><text class="cardtext" x="882" y="406"><tspan x="882" dy="0">Apply bounded traversal</tspan><tspan x="882" dy="17">depth and reject</tspan><tspan x="882" dy="17">user-authored relation</tspan></text><text class="mono" x="882" y="452">ev_000_03</text><rect class="actioncard" x="626" y="494" width="212" height="118" rx="8"/><text class="rank" x="644" y="522">finding 3</text><text class="cardtext" x="644" y="550"><tspan x="644" dy="0">Bind every memory read</tspan><tspan x="644" dy="17">to tenant-scoped</tspan><tspan x="644" dy="17">capability tokens and</tspan></text><text class="mono" x="644" y="596">ev_000_02</text><rect class="actioncard" x="864" y="494" width="212" height="118" rx="8"/><text class="rank" x="882" y="522">finding 4</text><text class="cardtext" x="882" y="550"><tspan x="882" dy="0">Bind every memory read</tspan><tspan x="882" dy="17">to tenant-scoped</tspan><tspan x="882" dy="17">capability tokens and</tspan></text><text class="mono" x="882" y="596">ev_000_07</text>
 </svg>
